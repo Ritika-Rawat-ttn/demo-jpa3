@@ -19,10 +19,13 @@ public class Author {
 
     @Embedded
      private Address address;
+//Q6 Implement One to One mapping between Author and Book.
+    //One to one mapping will be done  between author and book which means an can can only wirte one book and vice versa.
+    //for this we will use @onetoone mapping between author and book
+@OneToOne(cascade = CascadeType.ALL) @JoinColumn(name = "auth_id")
+private Author author;
 
 
-    @OneToOne(mappedBy = "author")
-    private Book book;
 
 
 //Q-8 . Implement Many to Many Mapping between Author and Book.

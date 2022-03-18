@@ -16,9 +16,7 @@ public class Book {
 
 
     private String bookName;
-//Q6 Implement One to One mapping between Author and Book.
-    //One to one mapping will be done  between author and book which means an can can only wirte one book and vice versa.
-    //for this we will use @onetoone mapping between author and book
+
     @ManyToOne
     @JoinColumn(name = "auth_id")
     private Author author;
